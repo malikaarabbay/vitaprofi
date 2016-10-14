@@ -5,8 +5,8 @@ jQuery(document).ready(function ($) {
 
 	 $('.reviews-slider').slick({
         autoplay: true,
-        autoplaySpeed: 1000,
-        speed: 1000,
+        autoplaySpeed: 4000,
+        speed: 2000,
         arrows: true,
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -15,16 +15,26 @@ jQuery(document).ready(function ($) {
      	dots:false,
         prevArrow: '<span class="slick-prev slick-nav slick-nav--prev" aria-label="previous"></span>',
         nextArrow: '<span class="slick-next slick-nav slick-nav--next" aria-label="next"></span>',
+        responsive: [{
+             breakpoint: 900,
+            settings: {
+                slidesToShow: 1,
+            }}
+
+        
+        ] 
     });
      $('.slider').slick({
         autoplay: true,
-        autoplaySpeed: 1000,
-        speed: 1000,
+        autoplaySpeed: 4000,
+        speed: 1500,
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnHover: false,
         dots:false,
+        fade: true,
+        cssEase: 'linear',
         initialSlide: 0,
     });
 
@@ -35,7 +45,7 @@ jQuery(document).ready(function ($) {
 
      //menu
        $('.mob_start').click(function(e) {
-    var $mob_part = $('.menu');
+    var $mob_part = $('.nav');
     if ($mob_part.css('display') != 'block') {
     	$(this).addClass('active');
         $mob_part.animate({height: "show"}  ,"1000");
@@ -57,6 +67,7 @@ jQuery(document).ready(function() { // Р В·Р В°Р С—РЎС“РЎРѓР
 		openEffect	: 'none',
 		closeEffect	: 'none'
 	});
+
 });
 
 

@@ -39,6 +39,7 @@ use yii\helpers\Url;
                 <li class="nav-item"><a href="<?= Url::toRoute(['/gallery/view', 'slug' => 'fotogallerea']) ?>" class="nav-item__link"><?= Yii::t('app', 'Photo Gallery') ?></a></li>
                 <li class="nav-item"><a href="<?= Url::toRoute(['/site/contact']) ?>" class="nav-item__link"><?= Yii::t('app', 'Contacts') ?></a></li>
             </ul>
+          <div class="mob_start"></div>
             <div class="serach-container">
                 <div class="search-icon">
                     <img src="/img/search.svg" alt="">

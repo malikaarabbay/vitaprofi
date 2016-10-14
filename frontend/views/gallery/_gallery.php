@@ -14,8 +14,7 @@ use common\models\Lang;
 ?>
 <?php foreach($model->images as $images) {?>
 <li class="gallery-list__item">
-    <a class="gallery-list__item-link fancybox" href="img/news.jpg"  rel="gallery" >
-        <a class="fancybox" data-fancybox-group="gallery" href="<?= $images->image ?>">
+        <a class="gallery-list__item-link fancybox" data-fancybox-group="gallery" href="<?= $images->image ?>">
             <?php
             echo \himiklab\thumbnail\EasyThumbnailImage::thumbnailImg(
                 $images->imagePath, 278, 178, \himiklab\thumbnail\EasyThumbnailImage::THUMBNAIL_OUTBOUND,
@@ -30,6 +29,6 @@ use common\models\Lang;
             <?= (Lang::getCurrent()->id == 2) ? $images->title_ru : ' '; ?>
             <?= (Lang::getCurrent()->id == 3) ? $images->title_kz : ' '; ?>
         </div>
-    </a>
+    
 </li>
 <?php }?>

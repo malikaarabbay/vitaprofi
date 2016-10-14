@@ -25,7 +25,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/jquery.3.js',
-        'js/app.js',
+        'js/app.min.js',
         'js/jquery.fancybox.pack.js?v=2.1.5',
     ];
     public $depends = [
