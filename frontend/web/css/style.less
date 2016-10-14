@@ -211,6 +211,7 @@ body{
     list-style: none;
     display: inline-flex;
     margin-left: 50px;
+    position: relative;
     &-item {
         margin-right: 40px;
         &:last-child{
@@ -1079,6 +1080,64 @@ body{
     padding: 5px 30px;
     outline: none;
 }
+.nav-sub__container {
+    position: absolute;
+    top: 18px;
+    z-index: 999;
+    display: none;
+   padding-top: 15px;
+}
+.nav-item:hover .nav-sub__container {
+    display: block;
+}
+.nav-sub {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #fff;
+    position: relative;
+    border: 3px solid #f3f3f3;
+    border-radius: 5px;
+    padding: 10px;
+    li{
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:before{
+            content: '';
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+        }
+        a{
+            color:#4b4b4b;
+            font-size: 14px;
+            text-transform: uppercase;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        &.corova:before {
+            background-image: url(../img/corova-menu.png)
+        }
+        &.curica:before {
+            background-image: url(../img/curica.png)
+        }
+        &.svinia:before {
+            background-image: url(../img/svinia.png)
+        }
+        &.oborudovanie:before {
+            background-image: url(../img/oborudovanie.png)
+        }
+    }
+}
 @media screen and (max-width: 1200px) {
 .cr,.top-line .cr{
     width: auto;
@@ -1094,6 +1153,7 @@ body{
     justify-content:space-between;
     margin: 0 20px;
     &-item{
+
         margin-right: 0;
     }
 }
@@ -1188,8 +1248,33 @@ body{
         }
     }
     .related-products__item-img img {
-    width: 100%;
-}
+        width: 100%;
+    }
+
+    .nav-sub__container {
+        position: relative;
+        top: 0px;
+        z-index: 999;
+        display: block;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+    .nav-sub {
+        background-color: #009140;
+        position: relative;
+        border: none;
+        padding: 0;
+    }
+    .nav-sub li a{
+        color:#fff;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .nav-sub li:before{
+        display: none;
+    }
 }
 
 

@@ -32,7 +32,24 @@ use yii\helpers\Url;
             </a>
             <ul class="nav nav-head">
                 <li class="nav-item"><a href="/" class="nav-item__link active"><?= Yii::t('app', 'Home') ?></a></li>
-                <li class="nav-item"><a href="<?= Url::toRoute(['/catalog/index']) ?>" class="nav-item__link"><?= Yii::t('app', 'Products') ?></a></li>
+                <li class="nav-item"><a href="<?= Url::toRoute(['/catalog/index']) ?>" class="nav-item__link"><?= Yii::t('app', 'Products') ?></a>
+                    <div class="nav-sub__container">
+                        <ul class="nav-sub">
+                            <li class="corova">
+                                <a href="">название раздела</a>
+                            </li>
+                            <li class="curica">
+                                <a href="">название раздела</a>
+                            </li>
+                            <li class="svinia  ">
+                                <a href="">название раздела</a>
+                            </li>
+                            <li class="oborudovanie">
+                                <a href="">название раздела</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="<?= Url::toRoute(['/article/view', 'slug' => 'uslugi']) ?>" class="nav-item__link"><?= Yii::t('app', 'Services') ?></a></li>
                 <li class="nav-item"><a href="<?= Url::toRoute(['/article/view', 'slug' => 'o-nas']) ?>" class="nav-item__link"><?= Yii::t('app', 'About us') ?></a></li>
                 <li class="nav-item"><a href="<?= Url::toRoute(['/file/index']) ?>" class="nav-item__link"><?= Yii::t('app', 'For professionals') ?> </a></li>
