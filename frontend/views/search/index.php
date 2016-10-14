@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= $form->field($model, 'query',['inputOptions' => ['class' => 'form-control search-text']])->textInput(['placeholder' => Yii::t('app', 'Search request'),'maxlength' => 75])->label(false) ?>
                     </div>
                     <div class="bigsearch_submit">
-                        <?= Html::submitButton(Yii::t('app', 'Search'), ['name' => 'search-button']) ?>
+                        <?= Html::submitButton(Yii::t('app', 'Search'), ['name' => 'search-button','class' => 'big-search-button button ']) ?>
                     </div>
                 </div>
                 <?php ActiveForm::end(); ?>
