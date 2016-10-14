@@ -32,10 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="contact-item">
                 <?php $form = ActiveForm::begin(['id' => 'contact-form', 'layout' => 'horizontal']); ?>
-                <?= $form->field($model, 'name', ['inputOptions' => ['class' => 'contact-input']])->label(Yii::t('app', 'Name').': <span class="contact-blue">*</span>') ?>
-                <?= $form->field($model, 'email', ['inputOptions' => ['class' => 'contact-input']])->label('E-mail: <span class="contact-blue">*</span>') ?>
-                <?= $form->field($model, 'body', ['inputOptions' => ['class' => 'contact-textarea']])->textArea(['rows' => 10, 'cols' => 30])->label(Yii::t('app', 'Message').': <span class="contact-blue">*</span>') ?>
-
+                <?= $form->field($model, 'name', ['inputOptions' => ['class' => 'contact-input']])->textInput()->input('name', ['placeholder' => Yii::t('app', 'Name')])->label(false); ?>
+                <?= $form->field($model, 'email', ['inputOptions' => ['class' => 'contact-input']])->textInput()->input('name', ['placeholder' => 'E-mail'])->label(false); ?>
+                <?= $form->field($model, 'body',['inputOptions' => ['class' => 'contact-textarea', 'placeholder' => Yii::t('app', 'Message'),],])->textarea(['cols' => 10, 'rows' => 20])->label(false) ?>
                 <div class="form-group text-center">
                     <?= Html::submitButton(Yii::t('app', 'Send'), ['class' => 'form-button button', 'name' => 'contact-button']) ?>
                 </div>

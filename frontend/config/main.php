@@ -51,6 +51,7 @@ return [
                 '<controller:(news)>/<slug>' => '<controller>/view',
 //                '<controller:(news)>/news-item/<slug>' => '<controller>/news-item',
                 '<controller:(catalog)>/view/<slug>' => '<controller>/view',
+                '<controller:(catalog)>/show/<slug>' => '<controller>/show',
                 '<controller:(gallery)>/view/<slug>' => '<controller>/view',
                 '<controller:(article)>/<slug>' => '<controller>/view',
 //                '<controller:(article)>/index/<slug>' => '<controller>/index',

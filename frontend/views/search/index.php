@@ -62,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?php foreach($productList as $product){?>
                             <div class="product-card">
                                 <div class="product-card__img">
-                                    <div class="new-card"><?= ($product->is_new) ? Yii::t('app', 'New') : ''?></div>
+                                    <?= ($product->is_new) ? '<div class="new-card">'.Yii::t('app', 'New').'</div>' : ''?>
                                     <?=
                                     EasyThumbnailImage::thumbnailImg(
                                         $product->imagePath,
