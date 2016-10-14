@@ -80,6 +80,18 @@ class Category extends \yii\db\ActiveRecord
         return $this->hasMany(Category::className(), ['id' => 'parent_id']);
     }
 
+    public function getProducts() {
+        return $this->hasMany(Product::className(), ['category_id' => 'id']);
+    }
+
+    public function getParent() {
+        return $this->hasOne(Category::className(), ['parent_id' => 'id']);
+    }
+
+//    public function getProducts() {
+//        return $this->hasMany(Product::className(), ['category_id' => 'id']);
+//    }
+
     public function getImage()
     {
         $image =  ($this->photo) ? $this->photo : 'placeholder.png';
