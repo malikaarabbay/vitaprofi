@@ -91,28 +91,35 @@ use common\models\Category;
         </div>
     </div>
     <?php if($relatedProducts) {?>
-    <div class="title">
-        <?= Yii::t('app', 'Related products') ?>
+    <div class="title title-menu">
+        <div class="title-item active">   <?= Yii::t('app', 'Related products') ?> </div>
+        <div class="title-item ">Отзыв</div>
     </div>
-    <div class="related-products">
-        <?php foreach ($relatedProducts as $relatedProduct) { ?>
-        <div class="related-products__item">
-            <div class="related-products__item-img">
-                <?php
-                echo \himiklab\thumbnail\EasyThumbnailImage::thumbnailImg(
-                    $relatedProduct->imagePath, 280, 340, \himiklab\thumbnail\EasyThumbnailImage::THUMBNAIL_OUTBOUND,
-                    [
-                        'class' => ''
-                    ]
-                );
-                ?>
+     <div class="catalog-tabs">
+        <div class="related-products catalog-tab__item active">
+            <?php foreach ($relatedProducts as $relatedProduct) { ?>
+
+            <div class="related-products__item">
+                <div class="related-products__item-img">
+                    <?php
+                    echo \himiklab\thumbnail\EasyThumbnailImage::thumbnailImg(
+                        $relatedProduct->imagePath, 280, 340, \himiklab\thumbnail\EasyThumbnailImage::THUMBNAIL_OUTBOUND,
+                        [
+                            'class' => ''
+                        ]
+                    );
+                    ?>
+                </div>
+                <a href="<?= Url::toRoute(['/product/view', 'slug' => $relatedProduct->slug]) ?>" class="more">
+                    <?= Yii::t('app', 'Learn more') ?>
+                </a>
             </div>
-            <a href="<?= Url::toRoute(['/product/view', 'slug' => $relatedProduct->slug]) ?>" class="more">
-                <?= Yii::t('app', 'Learn more') ?>
-            </a>
+            <?php } ?>
         </div>
-        <?php } ?>
-    </div>
+        <div class="catalog-reviwe catalog-tab__item">
+            asdasdasd
+        </div>
+      </div>
     <?php } ?>
 </div>
 </div>

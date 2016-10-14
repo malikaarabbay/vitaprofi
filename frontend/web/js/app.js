@@ -89,6 +89,13 @@ jQuery(document).ready(function() {
         $('.product-slider__big').find('.product-slider__big-item').eq(itemCount).addClass('active').siblings().removeClass('active');
 });
 
+
+ $('.title-item ').click(function () {
+        var itemCount = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.catalog-tabs').find('.catalog-tab__item').eq(itemCount).addClass('active').siblings().removeClass('active');
+});
+
 });
 
 	
